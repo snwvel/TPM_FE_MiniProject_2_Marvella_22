@@ -1,0 +1,450 @@
+/* Import Font Awesome Icons (Untuk semua ikon) */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+/* Variabel Warna Sesuai Spesifikasi */
+:root {
+  --color-primary-bg: #dbf0fd; /* Primary (Biru Muda, untuk Main Content Background) */
+  --color-secondary: #7accff; /* Secondary (Biru Sedang, untuk Sidebar Background & Tombol Utama) */
+  --color-title-light: #8fcef5; /* Title (Lighter Blue, digunakan untuk 'for seller') */
+  --color-title-dark: #4986db; /* Title (Darker Blue, digunakan untuk logo, ikon aksi, Header Card) */
+  --color-title-grey: #616161; /* Title (Grey, digunakan untuk detail label, ikon profil) */
+  --color-subtitle: #000000; /* Sub Title (Black, digunakan untuk judul utama, input title) */
+  --color-text: #4b5563; /* Text (Digunakan untuk paragraf/deskripsi dan detail produk) */
+  --color-white: #ffffff; /* Putih (Untuk Product Card Body dan Form Card Background) */
+}
+
+/* Reset dan Font Dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Font: Inter, 16px default */
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 16px; /* 16px (paragraph, navbar) */
+  background-color: var(
+    --color-primary-bg
+  ); /* Body background mengikuti primary color */
+  color: var(--color-text);
+}
+
+/* ---------------------------------- */
+/* SPLINE SANS STYLING (TITLE)   */
+/* ---------------------------------- */
+
+/* Logo Fumart: 36px (title) */
+.logo {
+  font-family: "Spline Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 36px;
+  color: var(--color-title-dark);
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Header Section: 36px (title) */
+.section-title {
+  font-family: "Spline Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 36px;
+  color: var(--color-subtitle);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* ---------------------------------- */
+/* INTER STYLING (TEXT/INPUT)   */
+/* ---------------------------------- */
+
+/* Input Title: 20px (input title) */
+.input-title {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-subtitle);
+  margin-bottom: 8px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Teks dan Tombol 16px (navbar, add product btn, product title, paragraph) */
+.for-seller,
+.nav-menu a,
+.bottom-menu a,
+.add-product-btn,
+.product-name,
+.product-desc,
+.input-field {
+  font-size: 16px;
+}
+
+/* --- Layout Kontainer Utama --- */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ---------------------------------- */
+/* SIDEBAR              */
+/* ---------------------------------- */
+
+.sidebar {
+  width: 280px;
+  background-color: var(--color-secondary); /* Sidebar Biru Sedang */
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: var(--color-white);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  margin-bottom: 30px;
+}
+
+/* Teks 'for seller' (Biru Muda) */
+.for-seller {
+  color: var(--color-title-light);
+  font-weight: 400;
+  margin-top: -5px;
+}
+
+/* Menu Utama */
+.nav-menu {
+  flex-grow: 1;
+}
+
+.nav-menu ul {
+  list-style: none;
+}
+
+.nav-menu li {
+  margin-bottom: 10px;
+}
+
+.nav-menu a,
+.bottom-menu a {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--color-white);
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.nav-menu li.active a {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: 600;
+}
+
+.icon {
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+}
+
+.bottom-menu {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+/* ---------------------------------- */
+/* KONTEN UTAMA            */
+/* ---------------------------------- */
+
+/* Main Content Background = Primary BG (#DBF0FD) - BIRU MUDA */
+.main-content {
+  flex-grow: 1;
+  padding: 20px 40px;
+  background-color: var(--color-primary-bg);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-icon {
+  font-size: 40px;
+  color: var(--color-title-grey);
+  cursor: pointer;
+}
+
+.content-section {
+  display: none;
+}
+
+.content-section.active {
+  display: block;
+}
+
+/* Tombol Add Product */
+.add-product-btn {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  float: right;
+  margin-bottom: 20px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+/* ---------------------------------- */
+/* PRODUCT CARD LIST (Tampilan Data) */
+/* ---------------------------------- */
+
+.product-list {
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* Product Card (Latar Belakang PUTIH) */
+.product-card {
+  background-color: var(--color-white);
+  border-radius: 12px;
+  padding: 0;
+  width: calc(33.333% - 20px);
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Product Header (Biru Tua) */
+.product-header {
+  background-color: var(--color-title-dark); /* Biru Tua (#4986DB) */
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+/* Kontainer untuk Detail dan Deskripsi (Bagian PUTIH) */
+.product-body {
+  padding: 15px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-icon {
+  font-size: 24px;
+  color: var(--color-white);
+  margin-right: 10px;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+}
+
+.product-name {
+  color: var(--color-white);
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Detail text (14px) - Warna teks detail (nilai) */
+.product-detail {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: var(--color-text); /* Warna teks detail (nilai) */
+}
+
+/* Label (Category, Stock, Price) - Warna label (Category:, Stock:) */
+.detail-label {
+  font-weight: 600;
+  color: var(--color-title-grey); /* Warna label */
+}
+
+/* Product Description (16px) - Warna deskripsi */
+.product-desc {
+  color: var(--color-text); /* Warna deskripsi */
+  margin-top: 8px;
+  line-height: 1.4;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.product-actions {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 10px 20px 15px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 5px;
+  transition: color 0.2s;
+}
+
+.edit-btn {
+  color: var(--color-title-dark);
+}
+
+.delete-btn {
+  color: var(--color-title-grey);
+}
+
+/* ---------------------------------- */
+/* ADD/UPDATE FORM (Halaman Form) */
+/* ---------------------------------- */
+
+/* Form Card (PUTIH di dalam main content yang Biru Muda) */
+.form-card {
+  background-color: var(--color-white);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+}
+
+.textarea-field {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.file-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 0;
+}
+
+.hidden-file-input {
+  display: none;
+}
+
+.choose-file-btn {
+  background-color: #f0f0f0;
+  color: var(--color-subtitle);
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.file-name {
+  font-size: 14px;
+  color: var(--color-title-grey);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.submit-btn {
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-btn,
+.update-btn {
+  background-color: var(--color-title-dark);
+  color: var(--color-white);
+}
+
+.add-btn:hover,
+.update-btn:hover {
+  background-color: #3b6ab5;
+}
+
+/* ---------------------------------- */
+/* MEDIA QUERIES             */
+/* ---------------------------------- */
+@media (max-width: 1200px) {
+  .product-card {
+    width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+    padding: 20px 10px;
+  }
+
+  .logo {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .for-seller {
+    display: none;
+  }
+
+  .nav-menu a {
+    padding: 10px 5px;
+    justify-content: center;
+  }
+
+  .nav-menu a span {
+    display: none;
+  }
+
+  .icon {
+    margin: 0;
+  }
+
+  .bottom-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fumart for Seller - Products</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="logo-container">
+          <h1 class="logo">Fumart</h1>
+          <p class="for-seller">for seller</p>
+        </div>
+
+        <nav class="nav-menu">
+          <ul>
+            <li>
+              <a href="#"
+                ><i class="icon fas fa-tachometer-alt"></i> Dashboard</a
+              >
+            </li>
+            <li class="active">
+              <a href="#" onclick="showPage('products-page')"
+                ><i class="icon fas fa-box"></i> Products</a
+              >
+            </li>
+            <li>
+              <a href="#"><i class="icon fas fa-clipboard-list"></i> Orders</a>
+            </li>
+            <li>
+              <a href="#"><i class="icon fas fa-cog"></i> Settings</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="bottom-menu">
+          <a href="#"><i class="icon fas fa-question-circle"></i> Help</a>
+          <a href="#"><i class="icon fas fa-comment-dots"></i> Feedback</a>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <header class="header">
+          <div class="user-profile">
+            <i class="fas fa-user-circle profile-icon"></i>
+          </div>
+        </header>
+
+        <section id="products-page" class="content-section active">
+          <h2 class="section-title">Products</h2>
+          <button class="add-product-btn">
+            <i class="fas fa-plus"></i> Add Product
+          </button>
+          <div class="product-list">
+            <div class="product-card">
+              <div class="product-header">
+                <i class="fas fa-headphones-alt product-icon"></i>
+                <h3 class="product-name">Wireless Earbuds</h3>
+              </div>
+              <div class="product-body">
+                <p class="product-detail">
+                  <span class="detail-label">Category:</span> Electronics
+                </p>
+                <p class="product-detail">
+                  <span class="detail-label">Stock:</span> 320
+                </p>
+                <p class="product-detail">
+                  <span class="detail-label">Price:</span> Rp. 799.000
+                </p>
+                <p class="product-desc">
+                  <span class="detail-label">Desc:</span> Compact wireless
+                  earbuds delivering crisp audio and seamless Bluetooth
+                  connectivity. With long-lasting battery life and
+                  noise-isolating design, they offer an immersive listening
+                  experience whether you're working out, commuting, or relaxing.
+                </p>
+              </div>
+
+              <div class="product-actions">
+                <button class="action-btn edit-btn">
+                  <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button class="action-btn delete-btn">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-header">
+                <i class="fas fa-compress-arrows-alt product-icon"></i>
+                <h3 class="product-name">Yoga Mat</h3>
+              </div>
+              <div class="product-body">
+                <p class="product-detail">
+                  <span class="detail-label">Category:</span> Fitness
+                </p>
+                <p class="product-detail">
+                  <span class="detail-label">Stock:</span> 12
+                </p>
+                <p class="product-detail">
+                  <span class="detail-label">Price:</span> Rp. 340.000
+                </p>
+                <p class="product-desc">
+                  <span class="detail-label">Desc:</span> A durable, non-slip
+                  yoga mat designed for stability and comfort. Its cushioned
+                  surface supports your joints during stretching, balance
+                  training, and high-intensity workouts. Lightweight and easy to
+                  carry, perfect for home practice or studio sessions.
+                </p>
+              </div>
+              <div class="product-actions">
+                <button class="action-btn edit-btn">
+                  <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button class="action-btn delete-btn">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="product-card">
+              <div class="product-header">
+                <i class="fas fa-shopping-bag product-icon"></i>
+                <h3 class="product-name">Leather Backpack</h3>
+              </div>
+              <div class="product-body">
+                <p class="product-detail">
+                  <span class="detail-label">Category:</span> Accessories
+                </p>
+                <p class="product-detail">
+                  <span class="detail-label">Stock:</span> 8
+                </p>
+                <p class="product-detail">
+                  <span class="detail-label">Price:</span> Rp. 950.000
+                </p>
+                <p class="product-desc">
+                  <span class="detail-label">Desc:</span> A stylish
+                  genuine-leather backpack crafted for everyday use. Featuring
+                  multiple compartments for organized storage, it combines
+                  durability, elegance, and practicality ideal for work, travel,
+                  or casual outings.
+                </p>
+              </div>
+              <div class="product-actions">
+                <button class="action-btn edit-btn">
+                  <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button class="action-btn delete-btn">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="add-product-page" class="content-section">
+          <h2 class="section-title">Add Product</h2>
+          <div class="form-card">
+            <form id="addProductForm">
+              <div class="form-group">
+                <label for="productName" class="input-title"
+                  >Product Name:</label
+                >
+                <input type="text" id="productName" class="input-field" />
+              </div>
+              <div class="form-group">
+                <label for="productCategory" class="input-title"
+                  >Product Category:</label
+                >
+                <input type="text" id="productCategory" class="input-field" />
+              </div>
+              <div class="form-group">
+                <label for="price" class="input-title">Price:</label>
+                <input type="number" id="price" class="input-field" />
+              </div>
+              <div class="form-group">
+                <label for="desc" class="input-title">Desc:</label>
+                <textarea
+                  id="desc"
+                  class="input-field textarea-field"
+                ></textarea>
+              </div>
+              <div class="form-group file-group">
+                <label class="input-title">Photo:</label>
+                <input type="file" id="photo" class="hidden-file-input" />
+                <label for="photo" class="choose-file-btn">Choose file</label>
+                <span class="file-name">No file chosen</span>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="submit-btn add-btn">
+                  Add Product
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <section id="update-product-page" class="content-section">
+          <h2 class="section-title">Update Product</h2>
+          <div class="form-card">
+            <form id="updateProductForm">
+              <div class="form-group">
+                <label for="updateProductName" class="input-title"
+                  >Product Name:</label
+                >
+                <input type="text" id="updateProductName" class="input-field" />
+              </div>
+              <div class="form-group">
+                <label for="updateProductCategory" class="input-title"
+                  >Product Category:</label
+                >
+                <input
+                  type="text"
+                  id="updateProductCategory"
+                  class="input-field"
+                />
+              </div>
+              <div class="form-group">
+                <label for="updatePrice" class="input-title">Price:</label>
+                <input type="number" id="updatePrice" class="input-field" />
+              </div>
+              <div class="form-group">
+                <label for="updateDesc" class="input-title">Desc:</label>
+                <textarea
+                  id="updateDesc"
+                  class="input-field textarea-field"
+                ></textarea>
+              </div>
+              <div class="form-group file-group">
+                <label class="input-title">Photo:</label>
+                <input type="file" id="updatePhoto" class="hidden-file-input" />
+                <label for="updatePhoto" class="choose-file-btn"
+                  >Choose file</label
+                >
+                <span class="file-name">No file chosen</span>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="submit-btn update-btn">
+                  Update Product
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
