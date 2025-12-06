@@ -1,7 +1,4 @@
-/* Import Font Awesome Icons (Untuk semua ikon) */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
-
-/* Variabel Warna Sesuai Spesifikasi */
 :root {
   --color-primary-bg: #dbf0fd; /* Primary (Biru Muda, untuk Main Content Background) */
   --color-secondary: #7accff; /* Secondary (Biru Sedang, untuk Sidebar Background & Tombol Utama) */
@@ -12,31 +9,21 @@
   --color-text: #4b5563; /* Text (Digunakan untuk paragraf/deskripsi dan detail produk) */
   --color-white: #ffffff; /* Putih (Untuk Product Card Body dan Form Card Background) */
 }
-
-/* Reset dan Font Dasar */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Base Font: Inter, 16px default */
 body {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 16px; /* 16px (paragraph, navbar) */
+  font-size: 16px; 
   background-color: var(
     --color-primary-bg
-  ); /* Body background mengikuti primary color */
+  ); 
   color: var(--color-text);
 }
-
-/* ---------------------------------- */
-/* SPLINE SANS STYLING (TITLE)   */
-/* ---------------------------------- */
-
-/* Logo Fumart: 36px (title) */
 .logo {
   font-family: "Spline Sans", sans-serif;
   font-optical-sizing: auto;
@@ -46,8 +33,6 @@ body {
   margin: 0;
   font-weight: 700;
 }
-
-/* Header Section: 36px (title) */
 .section-title {
   font-family: "Spline Sans", sans-serif;
   font-optical-sizing: auto;
@@ -57,12 +42,6 @@ body {
   margin-bottom: 20px;
   font-weight: 700;
 }
-
-/* ---------------------------------- */
-/* INTER STYLING (TEXT/INPUT)   */
-/* ---------------------------------- */
-
-/* Input Title: 20px (input title) */
 .input-title {
   display: block;
   font-size: 20px;
@@ -71,8 +50,6 @@ body {
   margin-bottom: 8px;
   font-family: "Inter", sans-serif;
 }
-
-/* Teks dan Tombol 16px (navbar, add product btn, product title, paragraph) */
 .for-seller,
 .nav-menu a,
 .bottom-menu a,
@@ -82,17 +59,10 @@ body {
 .input-field {
   font-size: 16px;
 }
-
-/* --- Layout Kontainer Utama --- */
 .container {
   display: flex;
   min-height: 100vh;
 }
-
-/* ---------------------------------- */
-/* SIDEBAR              */
-/* ---------------------------------- */
-
 .sidebar {
   width: 280px;
   background-color: var(--color-secondary); /* Sidebar Biru Sedang */
@@ -107,15 +77,11 @@ body {
 .logo-container {
   margin-bottom: 30px;
 }
-
-/* Teks 'for seller' (Biru Muda) */
 .for-seller {
   color: var(--color-title-light);
   font-weight: 400;
   margin-top: -5px;
 }
-
-/* Menu Utama */
 .nav-menu {
   flex-grow: 1;
 }
@@ -155,19 +121,11 @@ body {
   padding-top: 20px;
   margin-top: 20px;
 }
-
-/* ---------------------------------- */
-/* KONTEN UTAMA            */
-/* ---------------------------------- */
-
-/* Main Content Background = Primary BG (#DBF0FD) - BIRU MUDA */
 .main-content {
   flex-grow: 1;
   padding: 20px 40px;
   background-color: var(--color-primary-bg);
 }
-
-/* Header */
 .header {
   display: flex;
   justify-content: flex-end;
@@ -188,8 +146,6 @@ body {
 .content-section.active {
   display: block;
 }
-
-/* Tombol Add Product */
 .add-product-btn {
   background-color: var(--color-secondary);
   color: var(--color-white);
@@ -202,11 +158,6 @@ body {
   font-weight: 600;
   transition: background-color 0.2s;
 }
-
-/* ---------------------------------- */
-/* PRODUCT CARD LIST (Tampilan Data) */
-/* ---------------------------------- */
-
 .product-list {
   clear: both;
   display: flex;
@@ -214,8 +165,6 @@ body {
   gap: 30px;
   margin-top: 50px;
 }
-
-/* Product Card (Latar Belakang PUTIH) */
 .product-card {
   background-color: var(--color-white);
   border-radius: 12px;
@@ -228,8 +177,6 @@ body {
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-
-/* Product Header (Biru Tua) */
 .product-header {
   background-color: var(--color-title-dark); /* Biru Tua (#4986DB) */
   padding: 15px 20px;
@@ -238,8 +185,6 @@ body {
   justify-content: flex-start;
   margin-bottom: 0;
 }
-
-/* Kontainer untuk Detail dan Deskripsi (Bagian PUTIH) */
 .product-body {
   padding: 15px 20px;
   flex-grow: 1;
@@ -263,20 +208,17 @@ body {
   margin: 0;
 }
 
-/* Detail text (14px) - Warna teks detail (nilai) */
 .product-detail {
   font-size: 14px;
   margin-bottom: 4px;
   color: var(--color-text); /* Warna teks detail (nilai) */
 }
 
-/* Label (Category, Stock, Price) - Warna label (Category:, Stock:) */
 .detail-label {
   font-weight: 600;
   color: var(--color-title-grey); /* Warna label */
 }
 
-/* Product Description (16px) - Warna deskripsi */
 .product-desc {
   color: var(--color-text); /* Warna deskripsi */
   margin-top: 8px;
@@ -315,11 +257,6 @@ body {
   color: var(--color-title-grey);
 }
 
-/* ---------------------------------- */
-/* ADD/UPDATE FORM (Halaman Form) */
-/* ---------------------------------- */
-
-/* Form Card (PUTIH di dalam main content yang Biru Muda) */
 .form-card {
   background-color: var(--color-white);
   padding: 30px;
@@ -397,9 +334,6 @@ body {
   background-color: #3b6ab5;
 }
 
-/* ---------------------------------- */
-/* MEDIA QUERIES             */
-/* ---------------------------------- */
 @media (max-width: 1200px) {
   .product-card {
     width: calc(50% - 15px);
